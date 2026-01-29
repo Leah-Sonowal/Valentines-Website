@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Be My Valentine?</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="message">Will u be my Valentine? 💘</h1>
+
+    <img id="gif" src="gifs/gif1.gif" alt="valentine gif" />
+
+    <div class="buttons">
+      <button id="yesBtn">YES 💖</button>
+      <button id="noBtn">NO 😒</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
