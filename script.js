@@ -85,8 +85,20 @@ yesBtn.addEventListener("click", () => {
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.animationDuration = 2 + Math.random() * 2 + "s";
     document.body.appendChild(heart);
+
+    //Song
+    const yesSong = document.getElementById("yesSong");
+
+function handleYes() {
+  yesSong.volume = 0.6; // soft, cute background
+  yesSong.play();
+
+  showYesPage(); // whatever function shows the YES page
+}
+
   }
 });
+
 
 
 
