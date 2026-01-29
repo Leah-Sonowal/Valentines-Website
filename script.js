@@ -25,12 +25,12 @@ const pages = [
     pink: 80
   },
   {
-    text: "Please think again dehaaaaaa",
+    text: "Please think again dehaaaaaa!",
     gif: "gifs/gif4.gif",
     pink: 120
   },
   {
-    text: "You're breaking my heart",
+    text: "You're breaking my heart T.T",
     gif: "gifs/gif5.gif",
     pink: 160
   }
@@ -87,4 +87,5 @@ yesBtn.addEventListener("click", () => {
     document.body.appendChild(heart);
   }
 });
+
 
