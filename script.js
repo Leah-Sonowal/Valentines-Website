@@ -95,9 +95,27 @@ function handleYes() {
 
   showYesPage(); // whatever function shows the YES page
 }
+    yesSong.volume = 0;
+yesSong.play();
+
+let v = 0;
+const fade = setInterval(() => {
+  if (v < 0.6) {
+    v += 0.05;
+    yesSong.volume = v;
+  } else {
+    clearInterval(fade);
+  }
+}, 200);
+
+    window.addEventListener("beforeunload", () => {
+  yesSong.pause();
+});
+
 
   }
 });
+
 
 
 
