@@ -2,6 +2,7 @@ const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const gif = document.getElementById("gif");
 const message = document.getElementById("message");
+const yesSong = document.getElementById("yesSong");
 
 let page = 0;
 let yesScale = 1;
@@ -70,6 +71,9 @@ noBtn.addEventListener("click", () => {
 
 
 yesBtn.addEventListener("click", () => {
+  // Clear screen safely
+  document.body.classList.add("yes-mode");
+
   document.body.innerHTML = `
     <div class="container">
       <h1>YAYYYYYYY 💖</h1>
@@ -78,43 +82,35 @@ yesBtn.addEventListener("click", () => {
     </div>
   `;
 
-  // Generate pixel hearts
+  // 🎵 Play music with fade-in
+  yesSong.volume = 0;
+  yesSong.play();
+
+  let v = 0;
+  const fade = setInterval(() => {
+    if (v < 0.6) {
+      v += 0.05;
+      yesSong.volume = v;
+    } else {
+      clearInterval(fade);
+    }
+  }, 200);
+
+  // 💖 Generate pixel hearts
   for (let i = 0; i < 40; i++) {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.animationDuration = 2 + Math.random() * 2 + "s";
     document.body.appendChild(heart);
-
-    //Song
-    const yesSong = document.getElementById("yesSong");
-
-function handleYes() {
-  yesSong.volume = 0.6; // soft, cute background
-  yesSong.play();
-
-  showYesPage(); // whatever function shows the YES page
-}
-    yesSong.volume = 0;
-yesSong.play();
-
-let v = 0;
-const fade = setInterval(() => {
-  if (v < 0.6) {
-    v += 0.05;
-    yesSong.volume = v;
-  } else {
-    clearInterval(fade);
   }
-}, 200);
 
-    window.addEventListener("beforeunload", () => {
+  window.addEventListener("beforeunload", () => {
   yesSong.pause();
 });
 
-
-  }
 });
+
 
 
 
