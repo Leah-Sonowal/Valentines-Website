@@ -72,7 +72,7 @@ noBtn.addEventListener("click", () => {
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
     <div class="container">
-      <h1>YOU WIN 💖</h1>
+      <h1>YAYYYYYYY 💖</h1>
       <p>Valentine Acquired 🎮</p>
       <img src="gifs/gif6.gif" style="width:250px;">
     </div>
@@ -87,5 +87,6 @@ yesBtn.addEventListener("click", () => {
     document.body.appendChild(heart);
   }
 });
+
 
 
