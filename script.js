@@ -44,6 +44,12 @@ noBtn.addEventListener("click", () => {
   // Stop changing pages after last one
   if (page < pages.length - 1) {
     page++;
+    if (page === 4) { // 0-based index, 5th page
+  document.body.classList.add("fifth-page");
+} else {
+  document.body.classList.remove("fifth-page");
+}
+
   }
 
   // Update content
@@ -103,6 +109,7 @@ yesBtn.addEventListener("click", () => {
   }
 });
 ;
+
 
 
 
