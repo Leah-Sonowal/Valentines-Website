@@ -93,5 +93,13 @@ button:active {
   display: none;
 }
 
+.fifth-page h1 {
+  font-size: 16px;   /* smaller question text */
+}
+
+.fifth-page p {
+  font-size: 12px;
+}
+
 
 
