@@ -3,6 +3,8 @@ const noBtn = document.getElementById("noBtn");
 const gif = document.getElementById("gif");
 const message = document.getElementById("message");
 const yesSong = document.getElementById("yesSong");
+const game = document.getElementById("game");
+const yesScreen = document.getElementById("yesScreen");
 
 let page = 0;
 let yesScale = 1;
@@ -70,17 +72,12 @@ noBtn.addEventListener("click", () => {
 });
 
 
-yesBtn.addEventListener("click", () => {
-  // Clear screen safely
-  document.body.classList.add("yes-mode");
 
-  document.body.innerHTML = `
-    <div class="container">
-      <h1>YAYYYYYYY 💖</h1>
-      <p>Valentine Acquired 🎮</p>
-      <img src="gifs/gif6.gif" style="width:250px;">
-    </div>
-  `;
+
+yesBtn.addEventListener("click", () => {
+  // Switch screens (NO DOM DESTRUCTION)
+  game.classList.add("hidden");
+  yesScreen.classList.remove("hidden");
 
   // 🎵 Play music with fade-in
   yesSong.volume = 0;
@@ -104,12 +101,9 @@ yesBtn.addEventListener("click", () => {
     heart.style.animationDuration = 2 + Math.random() * 2 + "s";
     document.body.appendChild(heart);
   }
-
-  window.addEventListener("beforeunload", () => {
-  yesSong.pause();
 });
+;
 
-});
 
 
 
