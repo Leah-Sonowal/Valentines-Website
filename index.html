@@ -2,28 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Be My Valentine?</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be My Valentine 💖</title>
+
+  <!-- Retro font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <h1 id="message">Will u be my Valentine? 💘</h1>
+  <!-- 🎵 AUDIO (must be OUTSIDE game screens) -->
+  <audio id="yesSong" src="audio/yes-music.mp3" loop></audio>
 
-    <img id="gif" src="gifs/gif1.gif" alt="valentine gif" />
+  <!-- 🎮 MAIN GAME SCREEN -->
+  <div id="game" class="container">
+    <h1 id="message">Will u be my Valentine?</h1>
+
+    <img
+      id="gif"
+      src="gifs/gif1.gif"
+      alt="valentine gif"
+      style="width:250px;"
+    >
 
     <div class="buttons">
       <button id="yesBtn">YES 💖</button>
-      <button id="noBtn">NO 😒</button>
+      <button id="noBtn">NO 💔</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
-  <audio id="yesSong" src="audio/cp1.mp3" loop></audio>
+  <!-- 💖 YES SCREEN -->
+  <div id="yesScreen" class="container hidden">
+    <h1>YAYYYYYYY 💖</h1>
+    <p>Valentine Acquired 🎮</p>
+    <img src="gifs/gif6.gif" style="width:250px;">
+  </div>
 
+  <!-- JS -->
+  <script src="script.js" defer></script>
 </body>
-</html> 
+</html>
+
+
 
 
